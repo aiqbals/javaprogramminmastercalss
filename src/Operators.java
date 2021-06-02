@@ -52,6 +52,19 @@ public class Operators {
 		boolean isCar = false;
 		if(isCar == true) {
 			System.out.println("Its assgn operator");
-		} // = also works since isCar is a boolean var and value can be assigned true here
+		} 
+		// = also works since isCar is a boolean var and value can be assigned true here
+		// we can we only isCar instead of isCar == True and for false !isCar
+		
+		// Ternary operator
+		isCar = true;
+		boolean wasCar = isCar ? true : false;
+		if(wasCar) {
+			System.out.println("wasCar is True");
+		}
+		
+		// All operators java
+		// https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html
+		// http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
 	}
 }
