@@ -65,6 +65,8 @@ public class Operators {
 		
 		// All operators java
 		// https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html
-		// http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
+		
+		// Java precedence - parenthesis gets higher prece, thn multi, divid, moduls and thn add substract
+		// http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html		
 	}
 }
