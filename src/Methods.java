@@ -11,7 +11,9 @@ public class Methods {
 //			System.out.println(finalScore);
 //		}
 		//calculateScore(gameOver, score, levelCompleted, bonus);
-		calculateScore(true, 800, 5, 100 );
+		//calculateScore(true, 800, 5, 100 );
+		int highScore = calculateScore(true, 800, 5, 100 );
+		System.out.println(highScore);
 		
 //		score = 10000;
 //		levelCompleted = 8;
@@ -38,7 +40,7 @@ public class Methods {
 		if(gameOver == true) {
 			int finalScore = score + (levelCompleted * bonus);
 			finalScore += 1000;
-			System.out.println(finalScore);
+			//System.out.println(finalScore);
 			return finalScore;
 		} 
 		
