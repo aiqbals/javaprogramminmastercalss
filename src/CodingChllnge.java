@@ -17,6 +17,16 @@ public class CodingChllnge {
 		printMegaBytesAndKiloBytes(2500);
 		printMegaBytesAndKiloBytes(-1024);
 		printMegaBytesAndKiloBytes(5000);
+		
+		// Barking dog
+		boolean res1 = shouldWakeUp(true, 1);
+		System.out.println(res1);
+		boolean res2 =shouldWakeUp(false, 2);
+		System.out.println(res2);
+		boolean res3 =shouldWakeUp(true, 8);
+		System.out.println(res3);
+		boolean res4 =shouldWakeUp(true, -1);
+		System.out.println(res4);
 	}
 	
 	
@@ -64,7 +74,13 @@ public class CodingChllnge {
 	
 	// Barking dog
 	public static boolean shouldWakeUp(boolean barking, int hourOfDay){
-		
+		if((hourOfDay < 0 || hourOfDay > 23) || (hourOfDay >= 8 && hourOfDay <= 22)) {
+			return false;
+		} else if(barking) {
+			return true;
+		} 
 		return false;
 	}
+	
+	//
 }
