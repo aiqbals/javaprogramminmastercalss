@@ -75,14 +75,29 @@ public class Methods {
 		System.out.println(name + " managed to get into position " + position + " on the high score table");
 	}
 	public static int calculateHighScorePosition(int score) {
+//		if(score >= 1000) {
+//			return 1;
+//		} else if(score >= 500 && score < 1000) {
+//			return 2;
+//		} else if(score >= 100 && score < 500) {
+//			return 3;
+//		} 
+//		return 4; // dlt extra code e.g., calibraces 
+		// It only goes to 2nd condition when less than 1000, and so the 3rd when less 500. So,
+		// Don't have to check extra condition in 2nd and 3rd condition e.g.,  && score < 1000
+		
+		// Otherway
+		int newPosition = 4; // assuming position 4 will be returned
 		if(score >= 1000) {
-			return 1;
-		} else if(score >= 500 && score < 1000) {
-			return 2;
-		} else if(score >= 100 && score < 500) {
-			return 3;
-		} else {
-			return 4;
+			newPosition = 1;
+		} else if(score >= 500) {
+			newPosition = 2;
+		} else if(score >= 100) {
+			newPosition = 3;
 		}
+		return newPosition;
 	}
 }
+
+// Use DiffMerge tool to compare two diff code files or folders
+// https://sourcegear.com/diffmerge/downloads.php
