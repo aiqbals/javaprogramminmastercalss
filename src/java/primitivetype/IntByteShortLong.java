@@ -32,6 +32,7 @@ public class IntByteShortLong {
 		System.out.println("Long Maximum Value = " + myMaxLongValue);
 		// a Byte occupies 32-bit.
 		
+		
 		// Casting
 		int myTotall = (myMinValue / 2);
 		byte myNewByteVal = (byte)(myMinByteValue / 2);
