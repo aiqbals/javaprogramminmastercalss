@@ -1,5 +1,4 @@
-package java.operators;
-
+package operators.keywords.expression.methos;
 
 public class Operators {
 	public static void main(String[] args) {

@@ -1,6 +1,34 @@
+package generics.learning;
 import java.util.ArrayList;
 
-// ************* ArrayList without Generics **************
+// ************* ArrayList with Generics **************
+
+public class GenericsIntro {
+	public static void main(String[] args) {
+		ArrayList<Integer> items = new ArrayList<>();
+		//ArrayList with parameterized type (generics)
+		items.add(1);
+		items.add(2);
+		items.add(3);
+		//items.add("Test"); // Now it gives warning in compile time
+		items.add(4);
+		items.add(5);
+		items.add(6);	
+		
+		printDoubled(items);
+	}
+	
+	public static void printDoubled(ArrayList<Integer> n) {
+		for(int i: n) { 
+		// no use of object type as we know the type of data
+			System.out.println(i * 2);
+			// adding type or typecas not needed anymore
+		}
+	}
+}
+
+
+//************* ArrayList without Generics **************
 
 //public class Generics1 {
 //	public static void main(String[] args) {
@@ -29,30 +57,3 @@ import java.util.ArrayList;
 //		}
 //	}
 //}
-
-
-// ************* ArrayList with Generics **************
-
-public class Generics1 {
-	public static void main(String[] args) {
-		ArrayList<Integer> items = new ArrayList<>();
-		//ArrayList with parameterized type (generics)
-		items.add(1);
-		items.add(2);
-		items.add(3);
-		//items.add("Test"); // Now it gives warning in compile time
-		items.add(4);
-		items.add(5);
-		items.add(6);	
-		
-		printDoubled(items);
-	}
-	
-	public static void printDoubled(ArrayList<Integer> n) {
-		for(int i: n) { 
-		// no use of object type as we know the type of data
-			System.out.println(i * 2);
-			// adding type or typecas not needed anymore
-		}
-	}
-}
