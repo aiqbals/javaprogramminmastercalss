@@ -52,7 +52,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
 			msg = " beat ";
 		} else if(ourScore == theirScore) {
 			tied++;
-			msg = "drew with ";
+			msg = " drew with ";
 		} else {
 			lost++;
 			msg = "lost to ";
