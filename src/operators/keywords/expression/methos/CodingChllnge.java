@@ -28,8 +28,26 @@ public class CodingChllnge {
 		System.out.println(res3);
 		boolean res4 =shouldWakeUp(true, -1);
 		System.out.println(res4);
+		
+		// leap year
+//		isLeapYear(1700);
+//		isLeapYear(1800);
+//		isLeapYear(1900);
+//		isLeapYear(2100);
+//		isLeapYear(2200);
+//		isLeapYear(2300);
+//		isLeapYear(2500);
+//		isLeapYear(2600);
+		
+		isLeapYear(1600);
+		isLeapYear(2000);
+		isLeapYear(2400);
+		
+		isLeapYear(-1600);
+		isLeapYear(2017);
+		isLeapYear(1924);
+
 	}
-	
 	
 	// Ch-1 
 	public static void checkNum(int num) {
@@ -60,7 +78,7 @@ public class CodingChllnge {
 		}
 	}
 	
-	// MegaBytes converter 
+	// Ch-3 MegaBytes converter 
 	public static void printMegaBytesAndKiloBytes(int kiloBytes){
 		int megabytes = (int) (kiloBytes * 0.001);
 		int remainingKb = (int) (megabytes % 1024);
@@ -73,7 +91,7 @@ public class CodingChllnge {
 		}
 	}
 	
-	// Barking dog
+	// Ch-4 Barking dog
 	public static boolean shouldWakeUp(boolean barking, int hourOfDay){
 		if((hourOfDay < 0 || hourOfDay > 23) || (hourOfDay >= 8 && hourOfDay <= 22)) {
 			return false;
@@ -83,5 +101,25 @@ public class CodingChllnge {
 		return false;
 	}
 	
-	//
+	// Ch-5 Leap year calculator
+	public static boolean isLeapYear(int year) {
+		// Check validity
+		if(year >= 1 && year <= 9999) {
+			if(year % 4 == 0) {
+				if(year % 100 == 0) {
+					if(year % 400 == 0) {
+						System.out.print(" Leap year and it has 366 days");
+						return true;
+					}
+					return false;
+				}
+				System.out.print(" Leap year and it has 366 days");
+				return true;
+			}	
+			System.out.print("This is not a leap year.");
+			return false;
+		}
+		System.out.print("Incor input");
+		return false;	
+	}
 }
