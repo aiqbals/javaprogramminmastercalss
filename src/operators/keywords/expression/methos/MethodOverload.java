@@ -2,8 +2,9 @@ package operators.keywords.expression.methos;
 
 public class MethodOverload {
 	public static void main(String[] args) {
-		calculateScore("A", 500);
+		calculateScore("Asif", 500);
 		calculateScore("A", 500, 5555);
+		calculateScore();
 		//System.out.println("Hello");
 	}
 	
@@ -16,6 +17,11 @@ public class MethodOverload {
 		System.out.print(" Player 2nd score is " + score2);
 		return score2;
 	}
+	
+	public static int calculateScore() {
+		System.out.print(" Player");
+		return 0;
+	}
 }
 
-// Same method name with diff parameter type or perameter no.
+// Same method name with diff parameter type or perameter no. Method must have unique signature
