@@ -7,8 +7,9 @@ public class MethodOverload {
 //		calculateScore();
 //		//System.out.println("Hello");
 		
-		calcFtAndIncTom(6, 0);
-		calcFtAndIncTom(6, -1);
+//		calcFtAndIncToCm(6, 0);
+//		calcFtAndIncToCm(6, -1);
+		calcFtAndIncToCm(100);
 	}
 	
 	public static int calculateScore(String playerName, int score) {
@@ -27,26 +28,28 @@ public class MethodOverload {
 	}
 	
 	// Ch-1
-	public static double calcFtAndIncTom(double feet, double inches) {
-		if(feet >= 0 || ((inches >= 0) && (inches <= 12))){
-			double cm = (feet * 12) * 2.54;
-			cm += inches * 2.54;
-			System.out.print(feet + " feet, " + inches + " inches = " + cm + " cm");
-			return cm;
+	public static double calcFtAndIncToCm(double feet, double inches) {
+		if(feet < 0 || ((inches < 0) || (inches > 12))){
+			System.out.print(" Invalid ");
+			return -1;
 		}
-		System.out.print(" Invalid ");
-		return -1;
+		
+		double cm = (feet * 12) * 2.54;
+		cm += inches * 2.54;
+		System.out.print(feet + " feet, " + inches + " inches = " + cm + " cm");
+		return cm;
 	}
 	
 	// Ch-1
-	public static double calcFtAndIncTom(double inches) {
+	public static double calcFtAndIncToCm(double inches) {
 		if(inches < 0){
 			System.out.print(" Invalid ");
 			return -1;
 		}
-		double inch = (inches * 0.0833333);
-		
-		return inch;
+		double ft = (inches / 12);
+		double remainingInch = inches % 12;
+		System.out.print(inches + " Inches is equal to  " + ft + " feet and "+ remainingInch + " inch ");
+		return calcFtAndIncToCm(ft, remainingInch);
 	}
 }
 
