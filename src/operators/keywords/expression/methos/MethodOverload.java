@@ -7,9 +7,11 @@ public class MethodOverload {
 //		calculateScore();
 //		//System.out.println("Hello");
 		
-//		calcFtAndIncToCm(6, 0);
-//		calcFtAndIncToCm(6, -1);
-		calcFtAndIncToCm(100);
+		double centimeters = calcFtAndIncToCm(6, 0);
+		if(centimeters < 0.0) {
+			System.out.println("Invalid parameters");
+		}
+		calcFtAndIncToCm(157);
 	}
 	
 	public static int calculateScore(String playerName, int score) {
@@ -46,8 +48,8 @@ public class MethodOverload {
 			System.out.print(" Invalid ");
 			return -1;
 		}
-		double ft = (inches / 12);
-		double remainingInch = inches % 12;
+		double ft = (int) inches / 12;
+		double remainingInch = (int) inches % 12;
 		System.out.print(inches + " Inches is equal to  " + ft + " feet and "+ remainingInch + " inch ");
 		return calcFtAndIncToCm(ft, remainingInch);
 	}
