@@ -33,6 +33,21 @@ public class ForLoop {
 			}
 		}
 		
+		//forEach
+		int ar[] = {2,3,4,5,6};
+		for(int el: ar) {
+			System.out.println(el);
+		}
+		
+		// 2D array
+		int ar2d[][] = {{2,3,4,5,6}, {7,8,9}};
+		for(int i = 0; i <= ar2d.length; i++) {
+			//System.out.println(ar2d[i]);
+			for(int j = 0; j <= 2; j++) {
+				System.out.println(ar2d[i][j]);
+			}
+		}
+		
 	}
 	
 	public static boolean isPrime(int n) {
