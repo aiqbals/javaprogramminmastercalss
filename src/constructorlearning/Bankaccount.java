@@ -19,15 +19,23 @@ public class Bankaccount {
 
 	// Constructor - an way of setting fields to set initial values
 	public Bankaccount(String accNumber, double balance, String name, String email, String phnno) {
-		// check or validte parameter
-		this.accNumber = accNumber;
+		this.accNumber = accNumber; // Standard and gen rule of thumb
+		//setAccNumber(accNumber);
+		// advantage of it is, it now can be validated incase it is a valid no. in the method
 		this.balance = balance;
 		this.customerName = name;
 		this.customerEmail = email;
 		this.customerPhnNo = phnno;
-		
 		System.out.println("Bankaccount constructor is called");
 	}
+	
+	// other two constructor - constructor overloading
+	// Constructor - an way of setting fields to set initial values
+		public Bankaccount(String name, String email, String phnno) {
+			this("999", 100.50, name, email, phnno);
+			// we can set two default paramtr 'accno', 'balance' to update automatically this way
+			System.out.println("Other constructor with 3 prmtrs is called");
+		}
 
 	// Other way to set field value
 	public void setAccNumber(String accNumber) {
