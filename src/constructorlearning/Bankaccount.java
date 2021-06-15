@@ -9,7 +9,8 @@ public class Bankaccount {
 	private String customerPhnNo;
 
 	// this empty constructor sets default value and call this constructors when no
-	// parameter are set.
+	// parameter are set. If call this constructor, it first call other constructor
+	// and if not value finds, it executes itself.
 	public Bankaccount() {
 		this("03", 5.00, "Default name", "Defautl email", "Default phoneno");
 		// this will be always the first statement in empty constructor body
@@ -24,6 +25,8 @@ public class Bankaccount {
 		this.customerName = name;
 		this.customerEmail = email;
 		this.customerPhnNo = phnno;
+		
+		System.out.println("Bankaccount constructor is called");
 	}
 
 	// Other way to set field value
