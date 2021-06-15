@@ -32,7 +32,7 @@ public class Bankaccount {
 	// other two constructor - constructor overloading
 	// Constructor - an way of setting fields to set initial values
 		public Bankaccount(String name, String email, String phnno) {
-			this("999", 100.50, name, email, phnno);
+			this("999", 100.5, name, email, phnno);
 			// we can set two default paramtr 'accno', 'balance' to update automatically this way
 			System.out.println("Other constructor with 3 prmtrs is called");
 		}

@@ -27,7 +27,7 @@ public class Main {
 		person3.deposite(100);
 		person3.withdraw(50);
 		
-		person4.withdraw(50);
+		person4.withdraw(100.5);
 	}
 
 }

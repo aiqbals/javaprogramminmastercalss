@@ -9,12 +9,15 @@ public class VipCustomer {
 	public VipCustomer() {
 		this("Default", 50, "default@gmx.de");
 		System.out.println("Emptly with default val constructor is called");
-	}
+	} 
+	//it calles the 3rd cons first and thn itself
 
 	public VipCustomer(String name, int creditlimit) {
 		this(name, creditlimit, "default2@gmx.de");
 		System.out.println("VipCustomer with 1 default val constructor is called");
 	}
+	// when 2 paramtrs but other 1 we wanna have as default
+	// it calles the 3rd cons first and then itself
 
 	public VipCustomer(String name, int creditlimit, String email) {
 		this.name = name;
@@ -24,14 +27,14 @@ public class VipCustomer {
 	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
 	public double getCreditlimit() {
-		return this.creditlimit;
+		return creditlimit;
 	}
 
 	public String getEmail() {
-		return this.email;
+		return email;
 	}
 }
