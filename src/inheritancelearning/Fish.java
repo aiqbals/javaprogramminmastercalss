@@ -27,6 +27,7 @@ public class Fish extends Animal{
 	}
 	
 	private void swim(int speed) {
+		System.out.println("--------------------------");
 		moveMuscles();
 		moveBackFIn();
 		super.move(speed);
