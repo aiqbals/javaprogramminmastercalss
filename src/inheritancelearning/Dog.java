@@ -35,11 +35,25 @@ public class Dog extends Animal{
 	
 	public void walk() {
 		System.out.println("Dog.walk() called");
-		//super.move();
-		move(5); // better way
+		super.move(5); // it calls move method of Animal class even if we override the move method here
+		//move(5); // better way and now the overriden move method is called 
 	}
 	
 	public void run() {
-		move(10);
+		System.out.println("Dog.run() called");
+		move(10); 
+		// better way and now the overriden move method is called 
+		// if there is no overridden method move for dog, it calls Animal move method default
+	}
+	
+	public void moveLegs(int speed) {
+		System.out.println("Dog.moveLegs() called");
+	}
+	
+	@Override
+	public void move(int speed) {
+		System.out.println("Dog.move() called");
+		moveLegs(speed);
+		super.move(speed);
 	}
 }
