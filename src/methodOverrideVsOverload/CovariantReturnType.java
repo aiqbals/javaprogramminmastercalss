@@ -14,11 +14,13 @@ public class CovariantReturnType {
 		public Burger createBurger() {
 			return new Burger();
 		}
+		// method creates Burger instance
 	}
 	
 	class HealthyBurgerFactory extends BurgerFactory {
 		public HealthyBurger createBurger() {
 			return new HealthyBurger();
 		}
+		// method creates HealthyBurger instance
 	}
 }
