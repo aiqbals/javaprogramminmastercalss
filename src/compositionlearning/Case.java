@@ -4,7 +4,7 @@ public class Case {
 	private String model;
 	private String manufacturar;
 	private String powerSupply;
-	private Dimensions dimentions; // Composition
+	private Dimensions dimentions; // Composition - Case has got dimension
 	
 	public Case(String model, String manufacturar, String powerSupply, Dimensions dimentions) {
 		super();
