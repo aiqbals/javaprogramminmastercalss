@@ -1,4 +1,5 @@
 package compositionlearning;
+// When designing program in java, it is good to look composition first before inheritance
 
 public class Main {
 
@@ -13,9 +14,11 @@ public class Main {
 		Motherboard theMotherboard = new Motherboard("BJ-200", "Aus", 4, 6, "v2.44");
 		
 		Computer pc = new Computer(theCase, theMotherboard, theMonitor);
-		pc.getMonitor().drawPixelAt(1500, 1200, "Red");
-		pc.getMontherboard().loadProgram("Windows 1.0");
-		pc.getTheCase().pressPowerButton();
+//		pc.getMonitor().drawPixelAt(1500, 1200, "Red");
+//		pc.getMontherboard().loadProgram("Windows 1.0");
+//		pc.getTheCase().pressPowerButton();
+		
+		pc.powerUp();
 	}
 
 }

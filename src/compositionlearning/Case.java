@@ -18,15 +18,15 @@ public class Case {
 		System.out.println("Power button pressed!");
 	}
 
-	public String getModel() {
+	private String getModel() {
 		return model;
 	}
 
-	public String getManufacturar() {
+	private String getManufacturar() {
 		return manufacturar;
 	}
 	
-	public String getPowerSupply() {
+	private String getPowerSupply() {
 		return powerSupply;
 	}
 

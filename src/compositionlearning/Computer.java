@@ -12,16 +12,28 @@ public class Computer {
 		this.monitor = monitor;
 	}
 
-	public Case getTheCase() {
-		return theCase;
+//	private Case getTheCase() {
+//		return theCase;
+//	}
+//
+//	private Motherboard getMontherboard() {
+//		return montherboard;
+//	}
+//
+//
+//	private Monitor getMonitor() {
+//		return monitor;
+//	}
+	
+	public void powerUp() {
+		//getTheCase().pressPowerButton(); // Accessing Case method by getter when public
+		theCase.pressPowerButton(); // when make the methods private instead of public
+		drawLogo();
 	}
-
-	public Motherboard getMontherboard() {
-		return montherboard;
-	}
-
-
-	public Monitor getMonitor() {
-		return monitor;
+	
+	private void drawLogo() {
+		// Facny graphics
+		// getMonitor().drawPixelAt(1200, 50, "Yellow"); // Accessing Monitor method by getter when public
+		monitor.drawPixelAt(1200, 50, "Yellow"); // when make the methods private instead of public
 	}
 }
