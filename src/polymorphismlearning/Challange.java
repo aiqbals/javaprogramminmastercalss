@@ -82,29 +82,52 @@ class BMW extends Car {
 	
 }
 
-//class Marcedes extends Car {
-//
-//	public Marcedes(int cylinders, String name) {
-//		super(cylinders, name);
-//	}
-//
-//	@Override
-//	public String startEngine() {
-//		return "Marcedes -> starting engine";
-//	}
-//
-//	@Override
-//	public String accelerate() {
-//		return "Marcedes -> accelerating";
-//	}
-//
-//	@Override
-//	public String brake() {
-//		// TODO Auto-generated method stub
-//		return "Marcedes -> braking";
-//	}
-//	
-//}
+class Marcedes extends Car {
+
+	public Marcedes(int cylinders, String name) {
+		super(cylinders, name);
+	}
+
+	@Override
+	public String startEngine() {
+		return "Marcedes -> starting engine";
+	}
+
+	@Override
+	public String accelerate() {
+		return "Marcedes -> accelerating";
+	}
+
+	@Override
+	public String brake() {
+		// TODO Auto-generated method stub
+		return "Marcedes -> braking";
+	}
+	
+}
+
+class Ford extends Car {
+
+	public Ford(int cylinders, String name) {
+		super(cylinders, name);
+	}
+
+	@Override
+	public String startEngine() {
+		return getClass().getSimpleName() + " -> starting engine";
+	}
+
+	@Override
+	public String accelerate() {
+		return getClass().getSimpleName() + " -> accelerating";
+	}
+
+	@Override
+	public String brake() {
+		return getClass().getSimpleName() + " -> braking";
+	}
+	
+}
 
 
 public class Challange {
@@ -130,29 +153,35 @@ public class Challange {
 		System.out.println(bmw.accelerate());
 		System.out.println(bmw.brake());
 		
-		//Marcedes marcedes = new Marcedes(1, "Car");
-		Car marcedes = new Car(6, "Marcedes") {
-			@Override
-			public String startEngine() {
-				return "Marcedes -> starting engine";
-			}
-		
-			@Override
-			public String accelerate() {
-				return "Marcedes -> accelerating";
-			}
-		
-			@Override
-			public String brake() {
-				// TODO Auto-generated method stub
-				return "Marcedes -> braking";
-			}
-		};
+		Marcedes marcedes = new Marcedes(1, "Car");
+//		Car marcedes = new Car(6, "Marcedes") {
+//			@Override
+//			public String startEngine() {
+//				return "Marcedes -> starting engine";
+//			}
+//		
+//			@Override
+//			public String accelerate() {
+//				return "Marcedes -> accelerating";
+//			}
+//		
+//			@Override
+//			public String brake() {
+//				// TODO Auto-generated method stub
+//				return "Marcedes -> braking";
+//			}
+//		};
 		// Inline class refactor
 		System.out.println("------" + marcedes.getName() + "------");
 		System.out.println(marcedes.startEngine());
 		System.out.println(marcedes.accelerate());
 		System.out.println(marcedes.brake());
+		
+		System.out.println("------Ford" + "------");
+		Ford ford = new Ford(1, "Ford");
+		System.out.println(ford.startEngine());
+		System.out.println(ford.accelerate());
+		System.out.println(ford.brake());
 		
 	}
 
