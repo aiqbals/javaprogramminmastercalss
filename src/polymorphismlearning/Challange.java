@@ -148,11 +148,12 @@ public class Challange {
 				return "Marcedes -> braking";
 			}
 		};
+		// Inline class refactor
 		System.out.println("------" + marcedes.getName() + "------");
 		System.out.println(marcedes.startEngine());
 		System.out.println(marcedes.accelerate());
 		System.out.println(marcedes.brake());
-		// Inline class refactor
+		
 	}
 
 }
