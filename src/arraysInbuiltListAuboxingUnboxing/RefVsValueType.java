@@ -27,6 +27,24 @@ public class RefVsValueType {
 		anotherIntArr[0] = 1; // both var value will be changed since it holds the same ref.
 		System.out.println(Arrays.toString(myIntArr)); // [1,0,0,0,0]
 		System.out.println(Arrays.toString(anotherIntArr)); // [1,0,0,0,0]
+		
+		modifyArrr(myIntArr);
+		// passing ref type to a method - modify both array value
+		System.out.println(Arrays.toString(myIntArr));
+		System.out.println(Arrays.toString(anotherIntArr));
+		
+		anotherIntArr = new int[] {4,5,6,7,8}; // anotherIntArr now hold new ref.
+		modifyArrr(myIntArr);
+		// passing ref type to a method - modify both array value
+		System.out.println(Arrays.toString(myIntArr));
+		System.out.println(Arrays.toString(anotherIntArr));
+		
+	}
+	
+	private static void modifyArrr(int[] array) {
+		array[0] = 2;
+		// array = new int[] {4,5,6,7,8};
+		// deference since we use new keyword - so new obj is created
 	}
 
 }
