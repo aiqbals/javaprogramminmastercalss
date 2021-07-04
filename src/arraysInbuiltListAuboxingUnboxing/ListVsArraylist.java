@@ -2,6 +2,8 @@ package arraysInbuiltListAuboxingUnboxing;
 
 import java.util.Scanner;
 
+//ararylist means resizable array or having no size limitaiton unlike usual array.
+// below is the example of why we need arraylist
 public class ListVsArraylist {		
 	    private static Scanner s = new Scanner(System.in);
 	    private static int[] baseData = new int[10];
